@@ -6,7 +6,7 @@
 class BritEdgeTestSuite {
   constructor() {
     this.baseURL = 'https://func-britedge-assignment.azurewebsites.net/api';
-    this.websiteURL = 'https://thankful-sand-085c06103.2.azurestaticapps.net';
+    this.websiteURL = 'https://thankful-sand-085c06103.1.azurestaticapps.net';
     this.results = [];
     this.startTime = Date.now();
   }
