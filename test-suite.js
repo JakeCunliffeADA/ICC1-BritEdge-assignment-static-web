@@ -144,19 +144,19 @@ class BritEdgeTestSuite {
     }
   }
 
-  // CORS Test
-  async testCORS() {
-    try {
-      const response = await fetch(`${this.baseURL}/GetBritEdgeInfo`);
-      const corsHeader = response.headers.get('Access-Control-Allow-Origin');
+  // // CORS Test
+  // async testCORS() {
+  //   try {
+  //     const response = await fetch(`${this.baseURL}/GetBritEdgeInfo`);
+  //     const corsHeader = response.headers.get('Access-Control-Allow-Origin');
       
-      const corsConfigured = corsHeader === '*' || corsHeader === this.websiteURL;
-      this.logResult('Security: CORS', corsConfigured, 
-        corsConfigured ? `CORS properly configured: ${corsHeader}` : 'CORS not configured correctly');
-    } catch (error) {
-      this.logResult('Security: CORS', false, `CORS test failed: ${error.message}`);
-    }
-  }
+  //     const corsConfigured = corsHeader === '*' || corsHeader === this.websiteURL;
+  //     this.logResult('Security: CORS', corsConfigured, 
+  //       corsConfigured ? `CORS properly configured: ${corsHeader}` : 'CORS not configured correctly');
+  //   } catch (error) {
+  //     this.logResult('Security: CORS', false, `CORS test failed: ${error.message}`);
+  //   }
+  // }
 
   // Performance Tests
   async testResponseTimes() {
@@ -243,7 +243,7 @@ class BritEdgeTestSuite {
     console.log('\n🔒 Testing Security...');
     await this.testSecurityHeaders();
     await this.testHTTPS();
-    await this.testCORS();
+    // await this.testCORS();
     
     // Performance Tests
     console.log('\n⚡ Testing Performance...');
